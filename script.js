@@ -15,16 +15,25 @@ function initialize() {
     }
   
     button.addEventListener('click', async () => {
-      button.disabled = true;
-      if ('pictureInPictureEnabled' in document && document.pictureInPictureEnabled && 'requestPictureInPicture' in videoElement) {
-        await videoElement.requestPictureInPicture();
-      } else {
-        console.log('Picture-in-picture not supported.');
-      }
-      button.disabled = false;
-    });
+        button.disabled = true;
+        await videoElement.play().catch(error => {
+          console.log('Error playing video:', error);
+        });
+        
+        if (typeof videoElement.requestPictureInPicture === 'function') {
+          try {
+            await videoElement.requestPictureInPicture();
+          } catch (error) {
+            console.log('Error entering picture-in-picture:', error);
+          }
+        } else {
+          console.log('Picture-in-picture not supported.');
+        }
+        
+        button.disabled = false;
+      });
   
-    selectMediaStream();
+    button.addEventListener('click', selectMediaStream);
   }
   
   if (document.readyState === 'loading') {
