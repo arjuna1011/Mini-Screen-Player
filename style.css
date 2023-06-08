@@ -1,55 +1,75 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(37, 37, 31);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(37, 37, 31);
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  
+}
+
+.everything {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; 
+}
+
+.banner {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .button-container {
-    border: 2px solid rgb(0, 0, 0);
-    padding: 10px;
-    border-radius: 7px;
-    box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7);
-    background: linear-gradient(to right, violet 0%, blueviolet 14.29%, red 28.57%, orangered 28.86%, yellow 57.14%, lime 71.43%, dodgerblue 85.71%, violet 100%);
-    animation: swirl 30s linear infinite;
-    background-size: auto auto;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 7px;
+  box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7);
+  background: linear-gradient(to right, violet 0%, blueviolet 14.29%, red 28.57%, orangered 28.86%, yellow 57.14%, lime 71.43%, dodgerblue 85.71%, violet 100%);
+  animation: swirl 30s linear infinite;
+  background-size: auto auto;
 }
 
 
 button {
-    cursor: pointer;
-    outline: none;
-    width: 120px;
-    height: 75px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 30px;
-    color: aliceblue;
-    text-shadow: 0 2px 5px black;
-    background: linear-gradient(to top, #696969, #575757);
-    border: 2px solid black;
-    border-radius: 7px;
-    box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7), 0 12px 12px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  width: 120px;
+  height: 75px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  color: aliceblue;
+  text-shadow: 0 2px 5px black;
+  background: linear-gradient(to top, #696969, #575757);
+  border: 2px solid black;
+  border-radius: 7px;
+  box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7), 0 12px 12px 0px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
-    background: linear-gradient(to bottom, #696969, #575757);
+  background: linear-gradient(to bottom, #696969, #575757);
 }
 
 button:active {
-    transform: translateY(2px);
-    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 @keyframes swirl {
   0% {
     background-position: 0% 50%;
   }
+
   100% {
     background-position: calc(100% + 100vw) 50%;
   }
