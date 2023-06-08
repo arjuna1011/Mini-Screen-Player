@@ -16,7 +16,11 @@ function initialize() {
   
     button.addEventListener('click', async () => {
       button.disabled = true;
-      await videoElement.requestPictureInPicture();
+      if ('pictureInPictureEnabled' in document && document.pictureInPictureEnabled && 'requestPictureInPicture' in videoElement) {
+        await videoElement.requestPictureInPicture();
+      } else {
+        console.log('Picture-in-picture not supported.');
+      }
       button.disabled = false;
     });
   
