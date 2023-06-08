@@ -16,9 +16,9 @@ body {
     padding: 10px;
     border-radius: 7px;
     box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7);
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-    background-size: 200% 200%;
-    animation: swirl 10s linear infinite;
+    background: linear-gradient(to right, violet 0%, blueviolet 14.29%, red 28.57%, orangered 28.86%, yellow 57.14%, lime 71.43%, dodgerblue 85.71%, violet 100%);
+    animation: swirl 30s linear infinite;
+    background-size: auto auto;
 }
 
 
@@ -51,6 +51,6 @@ button:active {
     background-position: 0% 50%;
   }
   100% {
-    background-position: 100% 50%;
+    background-position: calc(100% + 100vw) 50%;
   }
 }
