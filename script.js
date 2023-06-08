@@ -23,12 +23,9 @@ function initialize() {
     selectMediaStream();
   }
   
-  // Check if the DOM has already loaded
   if (document.readyState === 'loading') {
-    // DOM is still loading, use DOMContentLoaded event
     document.addEventListener('DOMContentLoaded', initialize);
   } else {
-    // DOM has already loaded, use load event
     window.addEventListener('load', initialize);
   }
   
